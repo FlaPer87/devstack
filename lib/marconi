@@ -104,11 +104,13 @@ function init_marconi() {
 # install_marconi() - Collect source and prepare
 function install_marconi() {
     git_clone $MARCONI_REPO $MARCONI_DIR $MARCONI_BRANCH
+    setup_develop $MARCONI_DIR
 }
 
 # install_marconiclient() - Collect source and prepare
 function install_marconiclient() {
     git_clone $MARCONICLIENT_REPO $MARCONICLIENT_DIR $MARCONICLIENT_BRANCH
+    setup_develop $MARCONICLIENT_DIR
 }
 
 # start_marconi() - Start running processes, including screen
